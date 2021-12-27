@@ -14,36 +14,39 @@ Run `npm install ngex-accordion` to add the library into your project directory,
 
 1. Import AccordionModule to your app.module.ts
 
-	`import { AccordionModule } from 'ngex-accordion';`
+    `import { AccordionModule } from 'ngex-accordion';`
 
 2. Import AccordionDirective to your component to use the accordion:
 
-	`import { AccordionDirective } from 'ngex-accordion';`
+    `import { AccordionDirective } from 'ngex-accordion';`
 
-3. Define isOpenAll class-level flag and assign its value in your component to ues the accordion:
+3. Define `isOpenAll` class-level flag and assign its value in your component to ues the accordion:
 
-	`isOpenAll: boolean = <false|true>;`
+    `isOpenAll: boolean = <false|true>;`
 
-	The value `false` sets to always expand one item at a time, whereas `true` keeps all items expanded if you have expended any.    
+The value `false` sets to always expand one item at a time, whereas `true` keeps all items expanded if you have expended any.    
 
 4. Specify all required directives with your code in the HTML template. You can freely use all your own options and styles in your component template. There is no library-rendered component templates to limit your UI display. Below is the base template with the `ngex-accordion` directives.
  
-	<div accordion="isOpenAll">	
-		<div *ngFor="let item of dataList; let idx = index">                
-			<div accordionItem [index]="idx" >
-				<div accordionHeader>
-					{{item.key}}
-					<i class="accordion-toggle-btn fa fa-chevron-right"
-					   [class.accordion-active-icon]="accordion.isActiveItem(idx)"></i>
-				</div>                    
-				<div [class.accordion-expanded]="accordion.isActiveItem(idx)" >
-					<div *ngFor="let subItem of item.value">
-						{{subItem.text}}
-					</div>
-				</div>
-			</div>
-		</div>	
-	</div>
+    ```
+    <div accordion="isOpenAll">	
+        <div *ngFor="let item of dataList; let idx = index">                
+            <div accordionItem [index]="idx" >
+                <div accordionHeader>
+                    {{item.key}}
+                    <i class="accordion-toggle-btn fa fa-chevron-right"
+                       [class.accordion-active-icon]="accordion.isActiveItem(idx)">
+		    </i>
+		</div>                    
+                <div [class.accordion-expanded]="accordion.isActiveItem(idx)" >
+                    <div *ngFor="let subItem of item.value">
+                        {{subItem.text}}
+                    </div>
+                 </div>
+             </div>
+         </div>	
+    </div>
+    ```	
 
 ## Source Code and Demo Application
 
