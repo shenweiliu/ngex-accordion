@@ -1,0 +1,24 @@
+<div class="demo-content">
+    <h4>Tech Tutorial Documents</h4>
+    <div accordion="isOpenAll" class="accordion-host">
+        <ul class="list-panel">
+            <li *ngFor="let docItem of documentList; let idx = index">                
+                <div accordionItem [index]="idx" >
+                    <div accordionHeader class="accordion-header">
+                        {{docItem.key}}
+                        <i class="accordion-toggle-btn fa fa-chevron-right"
+                           [class.accordion-active-icon]="accordion.isActiveItem(idx)"></i>
+                    </div>                    
+                    <div class="accordion-body left-space" [class.accordion-expanded]="accordion.isActiveItem(idx)" >
+                        <div *ngFor="let doc of docItem.value">
+                            <a (click)="getDocument(doc)">{{doc.docName}} by {{doc.publisher}}</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,82 @@
+.accordion-host {
+    /*border: 1px solid #e1e1e2;*/
+    border-top: 1px solid #e1e1e2;
+    margin-top: 1.5rem;
+}
+
+.accordion-header {
+    display: flex;
+    height: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.accordion-toggle-btn {
+    border: none;
+    transition: transform 0.4s ease-in;
+    background: none;
+    font-size: 0.9rem;
+}
+
+.accordion-active-icon {
+    transform: rotate(90deg);
+}
+
+.accordion-body {    
+    padding: 0 1rem;
+    line-height: 0;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.accordion-expanded {
+    padding: 0rem 1rem 0.5rem 1rem;
+    line-height: 1.5;
+    /*transition: opacity .4s linear;*/
+    opacity: 1;
+    visibility: visible;
+}
+
+.demo-content {
+    margin: 2rem;
+    max-width: 550px;
+    width: 90%;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+    color: #337ab7 !important;
+}
+a:hover {
+    color: #039be5 !important;
+}
+a:focus {
+    color: #039be5 !important;
+}
+
+ul.list-panel {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+}
+
+ul > li {
+    border: 1px solid #e1e1e2;
+    border-top: none;
+    padding: 0.5rem 0rem;
+}
+
+.left-space {
+    margin-left: 1.5rem;
+}
+
+
+
