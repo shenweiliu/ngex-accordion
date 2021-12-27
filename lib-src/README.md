@@ -1,6 +1,6 @@
 # ngex-accordion
 
-A simple and light-weight accordion for applications with Angular versions 8 - 13. 
+A simple and light-weight accordion implemented with all directives for applications with Angular versions 8 - 13. 
 
 The library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12. It still uses the ViewEngine, instead of Ivy Partial option, for the better backward compatibility.
 
@@ -8,7 +8,7 @@ The `ngex-accordion` uses the directive, rather than component, design and patte
 
 ## Installation
 
-Run `npm install ngex-accordion` to add the library into your project directory, or add `"ngex-accordion": "~12.2.0"` to the package.json file and then run `npm install` to update the existing package.
+Run `npm install ngex-accordion` to add the library into your project directory, or add `"ngex-accordion": "~12.2.1"` to the package.json file and then run `npm install` to update the existing package.
 
 ## How to Use
 
